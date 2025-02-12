@@ -1,4 +1,4 @@
-# SensorGateaway
+# Sensor Gateaway
 This project implements a comprehensive Sensor Monitoring System designed to simulate and manage multiple temperature sensor nodes via a central sensor gateway. The system uses multi-threading, inter-process communication, and TCP connections to efficiently collect, process, and store real-time temperature data. It was developed as part of the Operating Systems course in the Bachelor of Electronics and ICT Engineering Technology program at KU Leuven.
 
 ## Project Overview
