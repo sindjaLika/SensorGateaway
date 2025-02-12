@@ -17,9 +17,9 @@ Main Process launches three threads:
 - Data Manager: Processes sensor data and detects extreme temperatures.
 - Storage Manager: Saves data to data.csv.
 
-Log Process:A child process that logs events from the main process using pipes for inter-process communication.
+Log Process: A child process that logs events from the main process using pipes for inter-process communication.
 
-Shared Data Structure (sbuffer):Enables thread-safe data exchange between components.
+Shared Data Structure (sbuffer): Enables thread-safe data exchange between components.
 
 ## Key Features
 Multi-Threading: The gateway handles multiple sensor nodes concurrently, assigning a dedicated thread to each node for efficient data processing.
