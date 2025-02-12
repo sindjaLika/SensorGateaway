@@ -2,27 +2,24 @@
 This project implements a comprehensive Sensor Monitoring System designed to simulate and manage multiple temperature sensor nodes via a central sensor gateway. The system uses multi-threading, inter-process communication, and TCP connections to efficiently collect, process, and store real-time temperature data. It was developed as part of the Operating Systems course in the Bachelor of Electronics and ICT Engineering Technology program at KU Leuven.
 
 ## Project Overview
-The system consists of two key components:
+The system includes two main components:
 
-Sensor Nodes (Clients): Simulated in software, each sensor node generates temperature data and transmits it to the sensor gateway using TCP connections.
+Sensor Nodes (Clients):
+- Simulated nodes that generate temperature data and send it to the sensor gateway via TCP connections.
 
-Sensor Gateway (Server): The core of the project, the gateway is responsible for:
-Managing Connections: Handling multiple sensor node connections concurrently.
-Data Processing: Reading sensor data, performing calculations like running averages, and identifying extreme temperatures.
-Data Storage: Saving collected data in a CSV file for future analysis.
-Logging Events: Recording system events (e.g., connections, disconnections, and temperature alerts) into a log file.
-System Architecture
+Sensor Gateway (Server):
+- Manages sensor connections, processes temperature data (e.g., running averages), stores data in CSV files, and logs system events (connections, disconnections, alerts) in gateway.log.
 
+### System Architecture
 Main Process launches three threads:
-Connection Manager: Listens for incoming sensor node connections over TCP, handles incoming data, and ensures each sensor node has a dedicated processing thread.
-Data Manager: Processes incoming data, computes running averages, and determines if temperatures are too hot or cold.
-Storage Manager: Writes temperature data to data.csv for persistent storage.
 
-Log Process:
-Runs as a child process of the main server process.
-Uses pipes for inter-process communication to receive log events from the main process.
-Logs events like new sensor connections, temperature alerts, and data insertions in gateway.log.
-Shared Data Structure (sbuffer): Facilitates communication between threads. Ensures thread-safe access when reading and writing sensor data.
+- Connection Manager: Manages TCP connections and data from sensor nodes.
+- Data Manager: Processes sensor data and detects extreme temperatures.
+- Storage Manager: Saves data to data.csv.
+
+Log Process:A child process that logs events from the main process using pipes for inter-process communication.
+
+Shared Data Structure (sbuffer):Enables thread-safe data exchange between components.
 
 ## Key Features
 Multi-Threading: The gateway handles multiple sensor nodes concurrently, assigning a dedicated thread to each node for efficient data processing.
