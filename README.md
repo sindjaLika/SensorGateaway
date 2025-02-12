@@ -43,13 +43,19 @@ Robust Error Handling: The system gracefully handles invalid sensor data, connec
 
 ## Running the Project
 Compile the Code: make all
+
 Start the Sensor Gateway: ./sensor_gateway <port_number> <max_clients>
+
 Example: ./sensor_gateway 1234 3
+
 This will start the server on port 1234, and it will accept up to 3 sensor node connections before shutting down.
 
 Simulate Sensor Nodes:
+
 Use the provided sensor_node.c from the labs to simulate client-side sensor nodes sending data to the gateway.
 
 Check Output:
+
 Sensor data is stored in data.csv.
+
 System logs are recorded in gateway.log.
