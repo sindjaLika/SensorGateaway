@@ -36,13 +36,13 @@ Event Logging: The system logs important events (e.g., sensor connections, disco
 Robust Error Handling: The system gracefully handles invalid sensor data, connection timeouts, and unexpected disconnections, ensuring reliable performance.
 
 ## Technologies Used
-Programming Language: C
-Network Communication: TCP sockets
-Concurrency: Multi-threading with POSIX threads (pthreads)
-Inter-Process Communication: Pipes
-Data Management: CSV file handling for data storage
-Development Environment: Linux (tested on Ubuntu), Clion IDE
-Build System: Makefile automation for compiling and testing
+- Programming Language: C
+- Network Communication: TCP sockets
+- Concurrency: Multi-threading with POSIX threads (pthreads)
+- Inter-Process Communication: Pipes
+- Data Management: CSV file handling for data storage
+- Development Environment: Linux (tested on Ubuntu), Clion IDE
+- Build System: Makefile automation for compiling and testing
 
 ## Running the Project
 Compile the Code: make all
